@@ -1,0 +1,6 @@
+<webscript>
+    <shortname>MOTD Dashlet</shortname>
+    <description>A dashlet which can contain an HTML message of the day</description>
+    <family>user-dashlet</family>
+    <url>/components/dashlets/sv-theme/motd</url>
+</webscript>

@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>safe-move-to</shortname>
+  <description>Safe Move-To module primarily for Document Library</description>
+  <url>/modules/documentlibrary/safe-move-to</url>
+</webscript>

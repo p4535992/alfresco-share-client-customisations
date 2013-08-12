@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Sets a dashboard to a certain state</shortname>
+   <description>Sets a user/site's dashboard</description>
+   <format default="json"/>
+   <url>/sv-theme/set-dashboard</url>
+</webscript>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+	<!--
+		This file defines Spring configuration for the module. Small modules
+		can include their configuration directly, but as module size increases
+		it becomes a better idea to split the spring config up using imports
+		as shown below. This allows you to assemble a module from pluggable
+		components more easily. The path in the config should relate to the
+		package name of the component(s) you are configuring for ease of
+		navigation.
+	-->
+<beans>
+	<import
+		resource="classpath:alfresco/module/com_surevine_alfresco_SvThemeModule/bootstrap-context.xml" />
+</beans>

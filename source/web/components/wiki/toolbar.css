@@ -1,0 +1,82 @@
+.wiki-toolbar .new-page button
+{
+   background: transparent url(../images/new-wiki-page-16.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}
+
+.wiki-toolbar .new-page .yui-button-disabled button
+{
+   background: transparent url(../images/new-wiki-page-unavailable-16.png) no-repeat 12px 4px;
+}
+
+.wiki-toolbar .delete-page button
+{
+   background: transparent url(../images/md-destroy.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}
+
+.wiki-toolbar .delete-page .yui-button-disabled button
+{
+   background-image: url(../images/md-destroy.png);
+}
+
+.wiki-toolbar .rename-page button
+{
+   background: transparent url(../images/edit-wiki-16.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}
+
+.wiki-toolbar .rename-page .yui-button-disabled button
+{
+   background-image: url(../images/rename-wiki-unavailable-16.png);
+}
+
+.wiki-toolbar .rss-feed
+{
+   float: right;
+}
+
+.wiki-toolbar .rss-feed a
+{
+   background: transparent url(../images/feed-icon-16.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}
+
+.wiki-toolbar .rss-feed .yui-button-disabled a
+{
+   background-image: url(../images/feed-icon-disabled-16.png);
+}
+
+.rename-panel .yui-ge div.yui-u {
+	width:28%;
+}
+
+.rename-panel .yui-ge div.first
+{
+   width: 68%;
+}
+
+
+.wiki-toolbar .mark-page-for-delete button
+{
+   background: transparent url(../images/md-delete.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}
+
+.wiki-toolbar .remove-delete-mark button
+{
+   background: transparent url(../images/md-undelete.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}
+
+.wiki-toolbar .delete-now button
+{
+   background: transparent url(../images/md-delete.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}
+
+.wiki-toolbar .undelete button
+{
+   background: transparent url(../images/md-undelete.png) no-repeat 12px 4px;
+   padding-left: 32px;
+}

@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Perishable Items</shortname>
+   <description>Perishable Items</description>
+   <family>user-dashlet</family>
+   <url>/components/dashlets/sv-theme/perishable</url>
+</webscript>

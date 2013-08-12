@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>permissions-basic</shortname>
+  <description>Document/Folder permissions module primarily for Document Library to allow basic permission updates</description>
+  <url>/modules/documentlibrary/permissions-basic</url>
+</webscript>

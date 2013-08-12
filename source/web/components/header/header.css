@@ -1,0 +1,224 @@
+/* Header Component */
+.header
+{
+   padding-top: 0px;
+   background: #F2A205 url('../../themes/default/images/header/header-background-grad.png') repeat-x;
+   height: 6em;
+   position: relative;
+}
+
+.header .header-protective-marking {
+	text-align: center;
+	font-weight: bold;
+	color: black;
+}
+
+.header .logo-wrapper
+{
+   position: absolute;
+   left: 13px;
+   top: 0.3em;
+}
+
+.header .menu-wrapper-outer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding-right: 10px;
+	background: transparent url('../../themes/default/images/header/main-nav-shadow-r.png') no-repeat top right;
+   min-width: 66%;
+}
+
+.header .menu-wrapper
+{
+	background: black;
+   line-height:35px;
+   font-weight: bold;
+   padding: 0 7px;
+}
+
+.header span.menu-item-separator
+{
+   padding: 0 0 0 0.2em;
+}
+
+.header span.menu-item
+{
+   padding-left: 10px;
+   vertical-align: middle;
+}
+
+.header span.menu-item a,
+.header span.menu-item a:visited
+{
+   color: #FFCC00;
+}
+
+.header span.menu-item a.active,
+.header span.menu-item a.active:visited
+{
+   color: #FFFFFF;
+}
+
+.header span.menu-item-icon
+{
+   padding-left: 0.5em;
+   vertical-align: middle;
+}
+
+.header .link-menu-button span.menu-item-icon
+{
+   padding: 1px 5px 0;
+}
+
+.header div.personal-menu
+{
+	background-color: black;
+	display: inline; 
+}
+
+.header div.personal-menu a,
+.header div.personal-menu a:visited
+{
+   color: #FFCC00;
+}
+
+.header div.personal-menu a.active,
+.header div.personal-menu a.active:visited
+{
+   color: #FFFFFF;
+}
+
+.header div.util-menu
+{
+	background-color: black;
+	display: inline; 
+}
+
+.header .search-box > span.yui-button
+{
+   background: none;
+   border-width: 0px;
+}
+
+.header div.search-box div.yuimenu div.bd ul li.yuimenuitem span.yuimenuitemlabel
+{
+   background-position: 15px 50%;
+   background-repeat: no-repeat;
+}
+
+.header div.search-box div.yuimenu div.bd ul li.yuimenuitem span.yuimenuitemlabel a
+{
+   padding-left: 20px;
+}
+
+.header div.search-box
+{
+   border: 1px solid #a0a0a0;
+   float: right;
+   height: 20px;
+   position: relative;
+   top: -2px;
+   background: white;
+   margin-right: 10px;
+}
+
+.header div.search-box span.yui-button
+{
+   height: 20px;
+   margin-right: -2px;
+   background-repeat: no-repeat;
+   border-width: 0px;
+}
+
+.header div.search-box span.yui-button span.first-child
+{
+   background-position: 3px 2px;
+   background-repeat: no-repeat;
+   border-width: 0px;
+}
+
+.header div.search-box span.yui-button span.first-child button
+{
+   min-height: 20px;
+   padding: 0 30px 0 0;
+   width: 36px;
+}
+
+.header div.search-box input[type="text"]
+{
+   border-color: white;
+   display: inline-block;
+   padding: 0;
+   position: relative;
+   top: -2px;
+   margin-right: 1px;
+}
+
+.header div.search-box input.faded
+{
+   opacity: 0.5;
+}
+
+
+/* Drop-down menus */
+
+.header .yuimenu .bd
+{
+   zoom: normal;
+   border: 1px solid #84B4D5;
+   background-color: #FFFFFF;
+   padding: 0;
+   margin-top: 2px;
+}
+
+.header .yuimenu .bd ul li.yuimenuitem .yuimenuitemlabel
+{
+   color: #68A2D2;
+   cursor: pointer;
+   padding: 4px 15px;
+}
+
+.header .yuimenu .bd ul li.yuimenuitem .yuimenuitemlabel a
+{
+   display: block;
+   text-decoration: none;
+}
+
+/* Menu: Selected state */
+
+.header .yuimenu .bd ul li.yuimenuitem-selected
+{
+   background-color: #7BA9CE;
+}
+
+.header .yuimenu .bd ul li.yuimenuitem-selected .yuimenuitemlabel
+{
+   color: #FFFFFF;
+}
+
+/* Menu: disabled */
+
+.header .yuimenu .bd ul li.yuimenuitem .yuimenuitemlabel.disabled
+{
+   color: #ccc;
+   background-color: #FFF;
+   cursor: default;
+}
+
+.header .personal-menu .link-menu-button input
+{
+   visibility: hidden;
+}
+
+.header .chat-launcher
+{
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+}
+
+.deleted-site-header
+{
+   background-color:#992200;
+}

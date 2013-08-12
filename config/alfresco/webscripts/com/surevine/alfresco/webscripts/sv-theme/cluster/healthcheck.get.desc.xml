@@ -1,0 +1,9 @@
+<webscript>
+   <shortname>Health Check</shortname>
+   <description>
+      Calls the repo healthcheck
+   </description>
+   <url>/cluster/HealthCheck</url>
+   <format default="html">any</format>
+   <authentication>none</authentication>
+</webscript>

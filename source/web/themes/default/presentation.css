@@ -1,0 +1,1334 @@
+/* Site-wide Styles */
+
+.sticky-wrapper,
+.sticky-footer
+{
+   font-family: Arial, sans-serif;
+   font-size: 81%;
+   color: #515D6B;
+}
+
+.sticky-wrapper {
+	min-width: 900px;
+}
+
+.ie-min-width {
+	width: 900px;
+	height: 0px;
+}
+
+#doc3 {
+	margin: auto 0;
+}
+
+a,
+a:visited,
+a:hover
+{
+   color: #000;
+   text-decoration: none;
+}
+
+.sticky-wrapper a:hover,
+.yui-panel-container a:hover
+{
+   text-decoration: underline;
+}
+
+.sticky-wrapper h1,
+.yui-panel-container h1
+{
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 146.5%;
+   font-weight: normal;
+}
+
+.sticky-wrapper h2,
+.yui-panel-container h2
+{
+   font-weight: bold;
+   font-size: 123.1%;
+}
+
+h2.thin
+{
+   font-weight: normal;
+}
+
+h1 .light,
+h1 .lighter,
+h2 .light,
+h2 .lighter
+{
+   color: #c7dbeb;
+}
+
+.sticky-wrapper h3,
+.yui-panel-container h3
+{
+   font-weight: bold;
+   font-size: 108%;
+}
+
+.sticky-wrapper h4,
+.yui-panel-container h4
+{
+   font-size: 100%;
+   font-weight: bold;
+}
+
+h3 .light,
+h3 .lighter,
+h4 .light,
+h4 .lighter
+{
+   color: #a2a2a2;
+}
+
+.sticky-wrapper hr
+{
+   color: #E4E4E4;
+   background-color: #E4E4E4;
+}
+
+.label
+{
+   font-weight: bold;
+}
+
+.error
+{
+   background: white !important;
+   color: red !important;
+   font-weight: bold;
+   padding: 0.2em 1em;
+}
+
+.error-alt
+{
+   background-color: red !important;
+   color: white !important;
+   font-weight: bold;
+   padding: 0.2em 1em;
+}
+
+.light
+{
+   font-weight: normal;
+}
+
+.lighter
+{
+   font-size: 93%;
+   font-weight: normal;
+}
+
+/* DASHLETS */
+
+.dashlet
+{
+   border: 2px solid #819AB9;
+   background-color: white;
+   margin-top: 0;
+}
+
+.dashlet .title
+{
+   background-color: #819AB9;
+   color: white;
+   font-size: 1.5em;
+   font-weight: bold;
+}
+
+.dashlet .feed
+{
+   background-image: url(images/feed-icon-16.png);
+   background-repeat: no-repeat;
+}
+
+.dashlet .toolbar
+{
+   background-color: #f6f6f6;
+   border-bottom: 1px solid #d3d3d3;
+}
+
+/*.dashlet .toolbar a
+{
+   color: #5497c4;
+}
+*/
+
+.dashlet .body
+{
+	background-color: #F9FCFD;
+}
+
+/*.dashlet .body a,
+.dashlet .body a:visited,
+.dashlet .body a:hover
+{
+   color: #4f94c9;
+}*/
+
+.dashlet .detail-list-item
+{
+   border-bottom: 1px dashed #e9e9e9;
+}
+
+.yui-skin-default .yui-panel
+{
+   border-bottom: medium none;
+}
+
+.yui-skin-default .mask
+{
+   opacity: 0.2;
+}
+
+.yui-skin-default .yui-panel .hd,
+.yui-skin-default .yui-panel .bdft,
+.yui-skin-default .yui-panel .ft
+{
+   color: #515D6B;
+   background: #E3EBEC;
+   border-bottom: 1px solid #C4C5C5;
+   border-left-color: #C4C5C5;
+   border-right-color: #C4C5C5;
+}
+
+.yui-skin-default .yui-panel .hd
+{
+   font-size: 123.1%;
+   font-weight: bold;
+   border-bottom: 1px solid #C4C5C5;
+}
+
+.yui-skin-default .yui-panel .bdft
+{
+   font-size: 100%;
+   border-top: 1px solid #C4C5C5;
+}
+
+.yui-skin-default .yui-panel .ft
+{
+   border-top: 1px solid #C4C5C5;
+   padding: 5px;
+}
+
+.yui-skin-default .yui-panel .bd
+{
+   color: #515D6B;
+   background-color: #F9FBFD;
+   border-left-color: #C4C5C5;
+   border-right-color: #C4C5C5;
+}
+
+.yui-skin-default .yui-panel .bd .yui-resize .yui-resize-handle
+{
+   background-color:#F9FBFD;
+}
+
+.yui-skin-default .yui-dt-data tr.yui-dt-odd.yui-dt-highlighted,
+.yui-skin-default .yui-dt-data tr.yui-dt-even.yui-dt-highlighted
+{
+   background-color:#F4FAFF;
+   cursor:auto;
+}
+
+.yui-skin-default .yui-dt-message
+{
+   background-color:inherit;
+}
+
+/* Style the default message  */
+
+.yui-skin-default #message .bd
+{
+   background-color: #808080;
+   color: white;
+}
+
+.yui-skin-default #message .bd span.wait
+{
+   background-image: url(images/wait.gif);
+   background-repeat: no-repeat;
+}
+
+.yui-skin-default .yui-overlay-hidden #message .bd span.wait
+{
+   display: none;
+}
+
+/* Style the default prompt and user input pop-ups */
+
+.yui-skin-default #prompt,
+.yui-skin-default #userInput
+{
+   border-top: 1px solid #C4C5C5;
+   border-bottom: 1px solid #C4C5C5;
+   background-color: #E3EBEC;
+}
+
+.yui-skin-default #prompt .bd,
+.yui-skin-default #userInput .bd
+{
+}
+
+.yui-skin-default #prompt .ft,
+.yui-skin-default #userInput .ft
+{
+   border-left: 1px solid #c4c5c5;
+   border-right: 1px solid #c4c5c5;
+   background-color: #e3ebec;
+}
+
+/* Page title and navigation styles */
+
+.page-title
+{
+   background-color: #6CA5CE;
+   border-width: 1px 0 0 0;
+   color: white;
+}
+
+.page-title a,
+.page-title a:visited
+{
+   color: #000;
+}
+
+.page-title a:hover
+{
+   color: #fff;
+}
+
+.page-title h1 span
+{
+   color: #fff;
+}
+
+.site-navigation
+{
+   background-color: #73B4DA;
+   background-image: url(../../components/images/navigation-bg.png);
+   border-bottom: 1px solid #4B86ae;
+   border-top: 1px dotted #bbd6e7;
+   color: white;
+}
+
+span.navigation-separator,
+span.navigation-item,
+span.navigation-item-alt
+{
+   color: #9fc6e1;
+}
+
+span.navigation-item a,
+span.navigation-item a:visited
+{
+   color: #0D3B57;
+}
+span.navigation-item a.active-page,
+span.navigation-item a.active-page:visited,
+span.navigation-item a:hover
+{
+   color: #fff;
+}
+
+
+span.navigation-separator
+{
+   border-right: 1px dotted #457A9C;
+}
+
+span.navigation-separator-alt
+{
+   border-right: 1px solid #457A9C;
+}
+
+/* Standard toolbar separator */
+
+.toolbar .separator
+{
+   border-right: 1px dotted #457A9C;
+}
+
+.sticky-wrapper strong
+{
+   font-weight: bold;
+}
+
+.sticky-wrapper em
+{
+   font-style: italic;
+}
+
+.rich-content a.wiki-missing-page
+{
+   color: #CC2200 !important;
+}
+
+.sticky-wrapper input[type="text"],
+.sticky-wrapper input[type="password"],
+.sticky-wrapper textarea,
+.sticky-wrapper select,
+.yui-panel-container input[type="text"],
+.yui-panel-container input[type="password"],
+.yui-panel-container textarea,
+.yui-panel-container select,
+.form-element-border,
+.share-form .yui-dt table   
+{
+   border: 1px solid #C5D6E2;
+   font-weight: normal;
+}
+
+/* same as theme-color-2 */
+.toolbar .link a:hover,
+.members-bar .member-link a:hover
+{
+   color:#038603;
+}
+
+/* Richtext Editor Plug-ins */
+
+.yui-toolbar-container .yui-toolbar-alfresco-imagelib span.yui-toolbar-icon,
+span.mce_alfresco-imagelibrary
+{
+   background-position: 0 0 !important;
+   background-image: url(images/alfresco-imagelib.png) !important;
+}
+
+.mce_alfresco-imagelibrary img
+{
+   background-position: 0px 2px !important;
+}
+
+/* Point the YUI button to the themed sprite */
+
+.yui-skin-default .yui-button
+{
+   background-image: url(images/sprite.png);
+}
+
+/* Override YUI Button styles for - flat button style */
+
+.yui-skin-default .flat-button .yui-button
+{
+   background: none;
+   border-color: transparent;
+}
+
+.yui-skin-default .flat-button .yui-button .first-child
+{
+   border-color: transparent;
+}
+
+.yui-skin-default .flat-button .yui-button-hover
+{
+   background: transparent url(images/sprite.png) repeat-x scroll 0 0;
+   border-color: #808080;
+   border-style: solid;
+   border-width: 1px 0;
+}
+
+.yui-skin-default .flat-button .yui-button-hover .first-child
+{
+   border-color: #808080;
+   border-style: solid;
+   border-width: 0 1px;
+}
+
+.yui-skin-default .flat-button .yui-radio-button-checked,
+.yui-skin-default .flat-button .yui-checkbox-button-checked
+{
+   background: #819AB9 none;
+}
+
+/* Override YUI Button styles for - title button style */
+
+.yui-skin-default .title-button .yui-button
+{
+   background: transparent url(images/title-button-bg.png) repeat-x 0 0;
+}
+
+.yui-skin-default .title-button a:hover
+{
+   color: #000;
+}
+
+.yui-skin-default .title-button .yui-button .first-child,
+.yui-skin-default .title-button .yui-button
+{
+   border-color: #286A99;
+}
+
+/* Paginator link styling */
+
+.yui-skin-default .yui-pg-container span
+{
+   color:#606060;
+}
+
+.yui-skin-default .yui-pg-container span.yui-pg-page.yui-pg-current-page
+{
+   color: #333333;
+   font-weight: bold;
+}
+
+.yui-skin-default .yui-pg-container a.yui-pg-first,
+.yui-skin-default .yui-pg-container a.yui-pg-previous,
+.yui-skin-default .yui-pg-container a.yui-pg-page,
+.yui-skin-default .yui-pg-container a.yui-pg-next,
+.yui-skin-default .yui-pg-container a.yui-pg-last
+{
+   border-color: #CBCBCB;
+   color: #2B6EB5;
+   text-decoration: none;
+}
+
+.yui-skin-default .yui-pg-container a.yui-pg-first:hover,
+.yui-skin-default .yui-pg-container a.yui-pg-previous:hover,
+.yui-skin-default .yui-pg-container a.yui-pg-page:hover,
+.yui-skin-default .yui-pg-container a.yui-pg-next:hover,
+.yui-skin-default .yui-pg-container a.yui-pg-last:hover
+{
+   text-decoration: underline;   
+}
+
+/* A combination of a link and splitbutton wrapped inside a span */
+
+.yui-skin-default .link-menu-button .yui-button span button
+{
+   color: #4C4C4C;
+   font-size: 2px;
+   background-image: url(images/link-menu-button-arrow.png);
+   background-position: center center;
+}
+
+#Share.yui-skin-default .link-menu-button .yui-button.yui-button-hover
+{
+   background-color: #FFFFFF;
+   border: 1px solid #7BA9CE;
+}
+
+#Share.yui-skin-default .link-menu-button.link-menu-button-menu-active .yui-button.yui-button-hover
+{
+   border-color: transparent;
+   background-color: transparent;
+}
+
+.yui-skin-default .link-menu-button .yui-button span.first-child,
+.yui-skin-default .link-menu-button .yui-button.yui-button-activeoption span.first-child,
+.yui-skin-default .link-menu-button .yui-button.yui-button-hover span.first-child
+{
+   border-width: 0;
+}
+
+.yui-skin-default .link-menu-button span.link-menu-button-link
+{
+   border-right: 1px #BDBDBD solid;
+}
+
+#Share.yui-skin-default .link-menu-button.link-menu-button-menu-active
+{
+   background-color: #FFFFFF;
+   border: 1px solid #7BA9CE;
+}
+
+.yui-skin-default .link-menu-button.link-menu-button-menu-active .yui-button.yui-menu-button-hover
+{
+   border: 1px solid #FFFFFF;
+}
+
+
+.topiclist .yui-dt-liner {
+   padding:0;
+}
+/* blog/wiki action items links */
+body.yui-skin-default .wikipage .editPage a:hover,
+body.yui-skin-default .wikipage .deletePage a:hover,
+body.yui-skin-default .wikipage .detailsPage a:hover,
+body.yui-skin-default .nodeEdit .onEditBlogPost a:hover,
+body.yui-skin-default .nodeEdit .onDeleteBlogPost a:hover
+{
+
+}
+
+/* YUI Menu */
+
+body.yui-skin-default .yuimenu .bd
+{
+   border:1px solid #6CA5CE;
+}
+
+/* YUI Menu roll over state*/
+
+body.yui-skin-default .yuimenuitemlabel
+{
+   text-decoration: none;
+}
+
+body.yui-skin-default .yuimenu .bd ul li.yuimenuitem-selected
+{
+   background-color: #6CA5CE;
+}
+
+body.yui-skin-default .yuimenu .bd ul li.yuimenuitem .yuimenuitemlabel,
+body.yui-skin-default .yuimenu .bd ul li.yuimenuitem .yuimenuitemlabel a
+{
+   color:#6CA5CE;
+}
+
+body.yui-skin-default .yuimenu .bd ul li.yuimenuitem-selected .yuimenuitemlabel,
+body.yui-skin-default .yuimenu .bd ul li.yuimenuitem-selected .yuimenuitemlabel a,
+body.yui-skin-default .yuimenu .bd ul li.yuimenuitem-selected span.description
+{
+    color:#FFF;
+}
+
+body.yui-skin-default .yuimenu .bd ul li.yuimenuitem .yuimenuitemlabel-disabled,
+body.yui-skin-default .yuimenu .bd ul li.yuimenuitem .yuimenuitemlabel-disabled a
+{
+   color: #A6A6A6;
+   cursor: default;
+}
+
+/*end YUI Menu */
+
+/* Location */
+
+.yui-skin-default .location-path,
+.yui-skin-default .location-site
+{
+   background-position: left 50%;
+   background-repeat: no-repeat;
+   padding: 2px 0 2px 20px;
+}
+
+.yui-skin-default .location-none
+{
+   margin-left: 0.5em;
+}
+
+.yui-skin-default .location-path
+{
+   background-image: url(../../components/documentlibrary/images/folder-closed-16.png);
+   margin-left: 0.5em;
+}
+
+.yui-skin-default .location-site
+{
+   background-image: url(../../components/images/site-16.png);
+}
+
+/* end Location*/
+
+/* Doclist */
+
+body.yui-skin-default .doclist .more-actions a:active,
+body.yui-skin-default .doclist .more-actions a:hover
+{
+   background-color: #6CA5CE;
+}
+
+body.yui-skin-default .doclist div.more-actions
+{
+   border: 1px solid #6CA5CE;
+}
+
+body.yui-skin-default .doclist .action-set a:active,
+body.yui-skin-default .doclist .action-set a:hover,
+body.yui-skin-default .doclist .action-set .highlighted
+{
+   border: 1px solid #6CA5CE;
+}
+
+body.yui-skin-default .doclist tr.yui-dt-highlighted,
+body.yui-skin-default .doclist tr.yui-dt-highlighted
+{
+   background-color: #f4faff;
+}
+
+body.yui-skin-default .yui-dt-data tr.yui-dt-highlighted,
+body.yui-skin-default .links-body tr.links-selected-row,
+body.yui-skin-default .over,
+.topicview
+{
+   background-color: #f4faff;
+}
+
+body.yui-skin-default .doclist tr.yui-dt-odd.yui-dt-highlighted td.yui-dt-last,
+body.yui-skin-default .doclist tr.yui-dt-even.yui-dt-highlighted td.yui-dt-last
+{
+   border-left: 1px solid #c5e6e9;
+}
+
+body.yui-skin-default .categoryview .category .ygtvtn,
+body.yui-skin-default .categoryview .category .ygtvtm,
+body.yui-skin-default .categoryview .category .ygtvtmh, body.yui-skin-default .categoryview .category .ygtvtmhh,
+body.yui-skin-default .categoryview .category .ygtvtp,
+body.yui-skin-default .categoryview .category .ygtvtph, body.yui-skin-default .categoryview .category .ygtvtphh,
+body.yui-skin-default .categoryview .category .ygtvln,
+body.yui-skin-default .categoryview .category .ygtvlm,
+body.yui-skin-default .categoryview .category .ygtvlmh, body.yui-skin-default .categoryview .category .ygtvlmhh,
+body.yui-skin-default .categoryview .category .ygtvlp,
+body.yui-skin-default .categoryview .category .ygtvlph, body.yui-skin-default .categoryview .category .ygtvlphh,
+body.yui-skin-default .categoryview .category .ygtvdepthcell
+{
+   background-image: url(images/categoryview-sprite.gif);
+}
+
+/* end doclist */
+
+/* invite page */
+
+.inviteusersbyemail .byemailbody
+{
+   background-color: #fbfbfb;
+}
+
+.people-finder .results
+{
+   background-color: #f6f9fc;
+}
+
+/* filter list link */
+
+.yui-skin-default li.selected,
+.yui-skin-default .treeview .selected,
+.yui-skin-default .categoryview .selected,
+body.yui-skin-default .yui-columnbrowser .yui-carousel-content li.yui-columnbrowser-column a.yui-columnbrowser-item-selected
+{
+   background-color: #9AC0CD;
+}
+
+/* these rules need to be separate from the above for ie6 */
+.yui-skin-default .treeview .selected > table,
+.yui-skin-default .categoryview .selected > table
+{
+   background-color: #9AC0CD;
+}
+
+.yui-skin-default .filter a.disabled,
+.yui-skin-default .filter a.disabled:active,
+.yui-skin-default .filter a.disabled:hover,
+.yui-skin-default .filter a.disabled:visited,
+.yui-skin-default .tags a.disabled,
+.yui-skin-default .tags a.disabled:active,
+.yui-skin-default .tags a.disabled:hover,
+.yui-skin-default .tags a.disabled:visited
+{
+   color: #a6a6a6;
+   cursor: not-allowed;
+}
+
+.yui-skin-default .filter a:hover,
+.yui-skin-default .tags a:hover
+{
+   text-decoration: none;
+}
+
+/* Link color */
+
+body.yui-skin-default .yui-columnbrowser .yui-carousel-content li.yui-columnbrowser-column a.yui-columnbrowser-item-selected a,
+li.selected a.filter-link,
+li.selected a.tool-link, 
+li.selected a.archive-link,
+li.selected a.tag-link,
+li.selected span.tag,
+body.yui-skin-default .treeview .selected table .ygtvlabel, 
+body.yui-skin-default .treeview .selected table .ygtvlabel:link, 
+body.yui-skin-default .treeview .selected table .ygtvlabel:visited, 
+body.yui-skin-default .treeview .selected table .ygtvlabel:hover,
+body.yui-skin-default .categoryview .selected table .ygtvlabel,
+body.yui-skin-default .categoryview .selected table .ygtvlabel:link,
+body.yui-skin-default .categoryview .selected table .ygtvlabel:visited,
+body.yui-skin-default .categoryview .selected table .ygtvlabel:hover
+{
+
+}
+
+body.yui-skin-default .treeview .selected div.ygtvchildren table .ygtvlabel, 
+body.yui-skin-default .treeview .selected div.ygtvchildren table .ygtvlabel:link, 
+body.yui-skin-default .treeview .selected div.ygtvchildren table .ygtvlabel:visited, 
+body.yui-skin-default .treeview .selected div.ygtvchildren table .ygtvlabel:hover,
+body.yui-skin-default .categoryview .selected div.ygtvchildren table .ygtvlabel,
+body.yui-skin-default .categoryview .selected div.ygtvchildren table .ygtvlabel:link,
+body.yui-skin-default .categoryview .selected div.ygtvchildren table .ygtvlabel:visited,
+body.yui-skin-default .categoryview .selected div.ygtvchildren table .ygtvlabel:hover
+{
+
+}
+
+.yui-skin-default .node .nodeTitle a,
+.yui-skin-default .node .nodeURL a,
+.yui-skin-default .nodeAttrValue a,
+.yui-skin-default .nodeFooter .tag a,
+.yui-skin-default .detail .tag a,
+.yui-skin-default a.wiki-tag-link,
+.yui-skin-default .node .userLink a,
+.yui-skin-default .site-members h3 a,
+.yui-skin-default .yui-calendar td.calcell a,
+.yui-skin-default .doclist .documents a,
+.yui-skin-default .attrValue a,
+.yui-skin-default .detail .item a,
+.yui-skin-default .info .meta-value a,
+.yui-skin-default .rules-none a
+{
+   color: #4F94C9;
+}
+
+.yui-skin-default .postview .nodeTitle a
+{
+   color: #606060;
+}
+
+.yui-skin-default .site-navigation
+{
+   background-image: url(./images/navigation-bg.png);
+}
+
+.yui-skin-default .rules-list a
+{
+   color: #515D6B;
+}
+
+/* Standard toolbar */
+
+.toolbar
+{
+   border-bottom: 1px solid #C7CCCE;
+}
+
+.toolbar .action-bar
+{
+   border-right: 1px solid #9eb0b7;
+}
+/* Calendar */
+
+.yui-skin-default #calendar .yui-calendar td.calcell.selected a
+{
+   background-color: #EBEFF1;
+}
+
+.yui-skin-default .dayview h2, .weekview h2,
+.yui-skin-default .calendar.weekview thead th,
+.yui-skin-default .calendar.monthview thead th 
+{
+   color:#000;
+}
+
+/* End Calendar */
+
+.cmis .body a
+{
+   color:#6CA5CE;
+}
+
+/* Twisters */
+
+.alfresco-twister-open
+{
+   background: transparent url(images/expanded.png) no-repeat scroll 0 50%;
+}
+
+.alfresco-twister-closed
+{
+   background: transparent url(images/collapsed.png) no-repeat scroll 0 50% !important;
+}
+
+/* Theme colors */
+
+.theme-color-1,
+a.theme-color-1,
+a.theme-color-1:visited,
+a.theme-color-1:hover
+{
+   color: #819AB9;
+}
+
+.theme-color-2,
+a.theme-color-2,
+a.theme-color-2:visited,
+a.theme-color-2:hover
+{
+   color: #613601;
+}
+
+.theme-color-3,
+a.theme-color-3,
+a.theme-color-3:visited,
+a.theme-color-3:hover
+{
+   color: #C7DBEB;
+}
+
+.theme-color-4,
+a.theme-color-4,
+a.theme-color-4:visited,
+a.theme-color-4:hover
+{
+   color: #009300;
+}
+
+.theme-color-5,
+a.theme-color-5,
+a.theme-color-5:visited,
+a.theme-color-5:hover
+{
+
+}
+/* Theme background colors */
+
+.theme-bg-color-1,
+div.theme-bg-color-1
+{
+   background-color: #819AB9;
+}
+
+.theme-bg-color-2,
+div.theme-bg-color-2
+{
+   background-color: #fffbdd;
+}
+
+.theme-bg-color-3,
+div.theme-bg-color-3
+{
+   background-color: #DEE8ED;
+}
+
+.theme-bg-color-4,
+div.theme-bg-color-4
+{
+   background-color: #EBEFF1;
+}
+
+.theme-bg-color-5,
+div.theme-bg-color-5
+{
+   background-color: #2B6EB5;
+}
+
+.theme-bg-color-6,
+div.theme-bg-color-6
+{
+   background-color: #F4FAFF;
+}
+
+/* Used for editing - same as meta data fields */
+
+.theme-bg-color-7,
+div.theme-bg-color-7
+{
+   background-color: #F5FFF2;
+}
+
+
+.theme-bg-1
+{
+
+}
+
+.theme-bg-2
+{
+   background-color: #E3EAEC;   
+}
+
+.theme-bg-selected
+{
+   background-color: #73B4DA;
+}
+
+/* Theme border type/colors */
+
+.theme-border-1
+{
+   border-color: #457f63;
+   border-style: dotted;
+}
+
+.theme-border-2
+{
+   border-color: #2B6EB5;
+}
+
+.theme-border-3
+{
+   border: 1px solid #c6c6c6 !important;
+}
+
+.theme-border-4
+{
+   border: 1px solid #DDD6A0;
+}
+
+.docfolder-label
+{
+   overflow:auto;
+}
+
+.docfolder-input
+{
+   width: 203px; 
+   vertical-align: top; 
+   margin-top: 2px;
+}
+
+.tree-div
+{
+   height: 200px;
+   overflow: auto;
+   margin-left: 5px;
+}
+
+.ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover
+{
+   background-color: #F9FBFD;
+   cursor: pointer;
+   margin-left: 2px;
+   text-decoration: none;
+}
+
+/* PERSONAL DASHBOARD */
+.user-dashboard-header {
+	position: absolute;
+	width: 66%;
+	color: white;
+	background: #2E568A;
+}
+
+.user-dashboard-header .banner-image {
+	width: 180px;
+	height: 120px;
+	float: left;
+	font-size: 1.5em;
+}
+
+.user-dashboard-header .header-content, .site-dashboard-header .header-content {
+	color: white;
+	padding: 10px 10px 10px 0px;
+}
+
+.user-dashboard-header .header-content h1, .site-dashboard-header .header-content h1 {
+	color: #FFCC00;
+	font-weight: bold;
+	font-size: 1.8em;
+	margin-bottom: 0.5em;
+	position:relative;
+	left:20px;
+}
+
+.user-dashboard-header .header-content h2, .site-dashboard-header .header-content h2 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1.4em;
+	position: relative;
+	left: 20px;
+}
+
+.user-dashboard-header .header-content p, .site-dashboard-header .header-content p {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-bottom: 0.25em;
+	position:relative;
+	left:20px;
+}
+
+.user-dashboard-header .tools {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 10px 10px 10px 0px;
+	text-align: right;
+}
+
+.user-dashboard-header .tools ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.user-dashboard-header .tools ul li {
+	display: inline;
+}
+
+.user-dashboard-header .tools ul li a {
+	color: white;
+}
+
+.user-dashboard-header .tools-separator {
+	height: 1em;
+	width: 1px;
+	border-right: 1px solid white;
+	margin: 0 1em;
+}
+
+#bd {
+	background: #D5E1E7;
+}
+
+.user-dashboard #bd {
+	padding-top: 120px;
+}
+
+.user-dashboard #bd, .site-dashboard #bd {
+	background: #D5E1E7 url('images/user-dashboard/right-background.gif') 66% 0% repeat-y;
+}
+
+.site-dashboard #bd {
+	clear: left;
+}
+
+div.dashboard #bd {
+	height:2000px;
+}
+
+.yui-gb.grid {
+	margin: 0 0;
+}
+ 
+.yui-gb.grid .column1 {
+	margin: 0; 
+	width: 33%;
+}
+
+.yui-gb.grid .column2 {
+	margin: 0;
+	width: 33%;
+}
+
+.yui-gb.grid .column3 {
+	margin: 0 0 0 2%;
+	width: 30%;
+	background: #D6E3E9;
+	display: inline;
+	padding-top: 20px;
+}
+
+.user-dashboard .yui-gb.grid .column3 {
+	margin-top: -120px;
+}
+
+/* SITE DASHBOARD */
+#alf-hd {
+	position: relative;
+}
+
+.site-dashboard-header {
+	width: 100%;
+	color: white;
+	background: #2E568A;
+	position: relative;
+	height: 70px;
+}
+
+/* This has the default image if it's not the corporate site */
+.site-dashboard-header .banner-image {
+    display: none;
+}
+
+.site-dashboard-header .banner-image h1 {
+	color: white;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 10px 15px;
+}
+
+/* This overrides the image for the corporate site */
+.site-dashboard-header .banner-image-site-corporate {
+}
+
+.site-dashboard-header .banner-image-site-corporate h1 {
+	color: black;
+}
+
+.site-dashboard-header .header-content {
+	height: 50px;
+}
+
+.site-dashboard-header .header-content .links {
+	position: absolute;
+	right: 30px;
+	top: 20px;
+}
+
+.site-navigation {
+	background: none;
+	background-image: none !important;
+	padding-bottom: 10px;
+	position: absolute;
+	top: 115px;	/* TODO: Position this in a better way */
+	left: 11px;
+	margin: 0;
+	border: none;
+}
+
+.site-navigation .navigation-item a, .site-navigation .navigation-item a:visited {
+	color: white;
+	font-weight: bold;
+}
+
+.site-navigation .navigation-item a.active-page {
+   color: #FFCC00 !important;
+}
+
+/* USER PROFILE */
+.profile .header-bar {
+	background: #FDE69F !important;
+	color: black !important;
+}
+
+.profile .content {
+	background: white;
+}
+
+/* PEOPLE FINDER */
+.people-finder {
+	margin: 0 1em !important;
+	padding: 1em 0 !important;
+}
+
+.people-finder .title {
+	color: black !important;
+	font-size: 1.2em;
+}
+
+/* WIKI */
+.wikipage-bar .title-bar {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.wiki-page {
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 10px;
+	background: white;
+	overflow: auto;
+}
+
+.wiki-page a {
+	color: #0022CC !important;
+	text-decoration: underline !important;
+}
+
+.wiki-page a.wiki-missing-page {
+	color: #CC2200 !important;
+}
+
+/* DOCUMENT LIBRARY */
+#divDocLibraryFilters .filter {
+	padding-left: 5px;
+}
+
+.path-nav {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* DISCUSSIONS */
+.topiclist-infobar {
+	margin-right: 0 !important;
+}
+
+/* GENERAL */
+.toolbar {
+	margin-right: 0 !important;
+}
+
+.userprofile {
+	margin-left: 0 !important;
+	padding-left: 15px !important;
+	background: white;
+}
+
+.page-title {
+	margin-left: 0 !important;
+	padding-left: 15px !important;
+}
+
+/* CHAT DASHLET */
+.chat-dashlet .body {
+	background: #FBC110;
+	padding: 10px;
+	position: relative;
+}
+
+.chat-dashlet .launch-text {
+	margin-top: 10px;
+	text-align: right;
+}
+
+.chat-dashlet .launch-text a {
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.chat-dashlet .launch-text a:hover {
+	color: #9999cc;
+}
+
+/* MOTD DASHLET */
+.motd-dashlet .body {
+	padding: 10px;
+}
+
+/* DOCUMENT ACTION LIST */
+.doclist .onActionManagePermissionsBasic a, .toolbar .onActionManagePermissionsBasic
+{
+   background-image: url(../../components/documentlibrary/images/permissions-16.png) !important;
+}
+
+/* ESL HELP POPUP */
+#eslHelpPopup .bd {
+	overflow: auto;
+}
+
+#eslHelpPopup .esl-help-container {
+	padding: 20px;
+}
+
+.wikipage .pageTitle {
+    color: #194F94;
+}
+
+
+/* Added to support blockquote and indent overrides in YUI */
+blockquote {
+    margin-left: 40px
+}
+
+/* Hide RSS buttons*/
+.rss-feed {
+    display: none;
+}
+
+.backLink {
+    padding-right: 1.5em
+}
+
+div.esl-tooltip div.bd {
+	background-color: #FFEE69 ! important;
+	border-bottom-color: #A6982B! important;
+    border-bottom-style: solid! important;
+    border-bottom-width: 1px! important;
+    border-left-color: #A6982B! important;
+    border-left-style: solid! important;
+    border-left-width: 1px! important;
+    border-right-color: #A6982B! important;
+    border-right-style: solid! important;
+    border-right-width: 1px! important;
+    border-top-color: #D4C237! important;
+    border-top-style: solid! important;
+    border-top-width: 1px! important;
+    color: black ! important;
+}
+
+p.deleted.items.explanation {
+    display: none;
+}

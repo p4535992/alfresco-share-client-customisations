@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<!-- 
+Customisation of any fo the "bootstrap" loaders goes in here.
+
+"Bootstrap" configuration is that configuration required by Alfresco to boot itself up.
+
+Examples here are the model and the web client configuration.
+-->
+
+<beans>
+    <bean id="com_surevine_alfresco_SvThemeModule_configBootstrap" class="org.alfresco.web.config.WebClientConfigBootstrap" init-method="init">
+        <property name="configs">
+            <list>
+                <value>classpath:alfresco/module/com_surevine_alfresco_SvThemeModule/web-client-custom.xml</value>
+            </list>
+        </property>
+    </bean>
+</beans>

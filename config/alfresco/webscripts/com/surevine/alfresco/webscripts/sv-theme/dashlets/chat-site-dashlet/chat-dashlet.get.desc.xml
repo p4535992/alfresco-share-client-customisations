@@ -1,0 +1,6 @@
+<webscript>
+    <shortname>Chat</shortname>
+    <description>A dashlet to link to the chat client</description>
+    <family>site-dashlet</family>
+    <url>/components/dashlets/sv-theme/site-chat</url>
+</webscript>

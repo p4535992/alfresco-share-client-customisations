@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Site Details</shortname>
+   <description>Site profile component used in the collaboration site</description>
+   <family>site-dashlet</family>
+   <url>/components/dashlets/sv-theme/site-profile</url>
+</webscript>

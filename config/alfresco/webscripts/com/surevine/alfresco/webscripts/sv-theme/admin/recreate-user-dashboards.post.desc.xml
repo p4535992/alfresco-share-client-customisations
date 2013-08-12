@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Recreate User Dashboards</shortname>
+   <description>Recreates all the user dahsboards</description>
+   <url>/sv-theme/recreate-user-dashboards</url>
+   <authentication>admin</authentication>
+</webscript>

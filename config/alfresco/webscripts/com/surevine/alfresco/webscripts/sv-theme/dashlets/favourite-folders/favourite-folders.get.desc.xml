@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Favourite Folders</shortname>
+   <description>Links to the current users favourite folders</description>
+   <family>user-dashlet</family>
+   <url>/components/dashlets/sv-theme/favourite-folders</url>
+</webscript>

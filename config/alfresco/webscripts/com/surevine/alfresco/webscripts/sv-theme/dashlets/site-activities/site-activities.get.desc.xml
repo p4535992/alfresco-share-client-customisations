@@ -1,0 +1,6 @@
+<webscript>
+   <shortname>Site Activities</shortname>
+   <description>Recently Modified Site Items</description>
+   <family>site-dashlet</family>
+   <url>/components/dashlets/sv-theme/site-activities</url>
+</webscript>

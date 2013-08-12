@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+This file is used to overrise or extend the "web-client-config.xml" file.
+-->
+
+<alfresco-config>
+	<config evaluator="string-compare" condition="SvTheme">
+		<svTheme>
+			<siteTitle>SV Theme Alfresco</siteTitle>
+		</svTheme>
+	</config>    
+</alfresco-config>

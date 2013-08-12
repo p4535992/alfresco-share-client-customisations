@@ -1,0 +1,270 @@
+/* Presence controls & message notifications */
+
+#presenceWrapper {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 10px;
+	width: 220px;
+	height: 26px;
+	background-color: white;
+	z-index: 100;
+}
+
+#presenceWrapper.enabled {
+	display: block;	
+}
+
+#setPresenceButton {
+	width: 30px;
+}
+
+#setPresenceToggle {
+	width: 19px;
+	height: 25px;
+	padding: 0 5px;
+	cursor: pointer;
+}
+
+#unreadMessagesButton {
+	width: 189px;
+}
+
+#unreadMessagesToggle {
+	width: 179px;	
+	height: 24px;
+	padding: 0 5px;
+	cursor: pointer;
+}
+
+#setPresenceWrapper {
+	display: none;
+	height: 134px;
+	padding-bottom: 5px;
+	position: absolute;
+	top: -139px;
+	background-color: #fff;
+}
+
+#setPresenceForm {
+	width: 200px;
+	padding: 10px;
+	text-align: left;
+}
+
+#setPresenceForm label {
+	font-weight: bold;
+}
+
+#setPresenceForm label.presenceLabel {
+	margin: 0 10px 0 0;
+}
+
+#setPresenceForm label.messageLabel {
+	clear: both;
+	margin-top: 10px;
+	display: none;
+}
+
+#setPresenceForm input[type="radio"] {
+	margin: 0 5px 5px 0;
+}
+
+#setPresenceStatus {
+	display: block;
+	width: 187px;
+	margin: 5px 0;
+	padding: 5px;	
+}
+
+#setPresenceSubmitButton {
+	margin: 5px 0 0 1px;
+	width: 197px;
+}
+
+#setPresenceSubmitButton button {
+	width: 100%;
+}
+
+#unreadMessagesWrapper {
+	display: none;
+	min-height: 63px;
+	position: absolute;
+	top: -63px;
+	background-color: #fff;
+}
+
+#unreadMessagesNotifications {
+	text-align: left;
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+#unreadMessagesNotifications.empty {
+	overflow: hidden;
+}
+
+.messageNotification {
+	display: block;
+	margin: 0 5px;
+	padding: 10px 0 !important;
+	border-bottom: 1px solid #ddd;
+}
+
+.messageNotification img {
+	display: block;
+	float: left;
+	margin: 0 10px 5px 0;
+}
+
+.messageNotificationName {
+	display: block;
+	float: left;
+	width: 120px;
+}
+
+.messageNotificationButton {
+	display: block;
+	float: right;
+	position: relative;
+	top: 4px;
+}
+
+.messageNotificationButton a, .inviteNotificationButton a {
+	padding: 0 5px !important;
+	text-decoration: none !important;
+}
+
+.messageNotification .clearfix, .inviteNotification .clearfix {
+	display: block;
+	clear: both;
+}
+
+.inviteNotification {
+	display: block;
+	margin: 0 5px;
+	padding: 10px 0 2px 0 !important;
+	border-bottom: 1px solid #ddd;
+}
+
+.inviteNotificationButton {
+	display: block;
+	float: right;
+	position: relative;
+	top: -10px;
+}
+
+.inviteText {
+	display: block;
+	float: left;
+	width: 145px;
+	margin-left: 5px;
+}
+
+.groupChatName {
+	display: block;
+	float: left;
+	width: 145px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+#launchChatWrapper {
+	width: 200px;
+	padding: 0;
+	margin-left: 9px;
+}
+
+#launchChatButton {
+    display: block;
+    width: 200px;
+    margin: 13px 0;
+}
+
+#launchChat {
+	width: 100%;
+	padding: 0;
+    text-decoration: none !important;
+    border: none;
+}
+
+#setPresenceWrapper.active, #unreadMessagesWrapper.active {
+	display: block;
+}
+
+.xmpp-presence-button {
+	float: left;
+	display: block;
+	margin: 0 !important;
+}
+
+.xmpp-presence-toggle {
+	font-size: 100% !important;
+}
+
+.xmpp-presence-toggle:hover, .xmpp-presence-control-header:hover {
+	text-decoration: none !important;
+	cursor: pointer;
+}
+
+#presenceWrapper .xmpp-presence-toggle.active {
+	background-color: #fff !important;
+	border-top: solid 1px #fff;
+	position: relative;
+	top: -1px;
+}
+
+.xmpp-presence-control {
+	width: 219px;
+	left: -1px;
+	border-left: solid 1px #808080;
+	border-right: solid 1px #808080;
+}
+
+.xmpp-presence-control-header {
+	
+	position: relative;
+	
+	width: 215px;
+	height: 20px;
+	padding: 2px;
+	margin: 0 !important;
+	
+	line-height: 20px;
+	
+	background-color: #ccc;
+	
+	cursor: pointer;
+}
+
+#currentPresenceLabel {
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 6px;
+	left: 2px;
+	background-repeat: no-repeat;
+}
+
+#currentPresenceLabel, #currentPresenceLabel.offline { background-image: url(../components/images/presence/buddy-small.png); }
+#currentPresenceLabel.available { background-image: url(../components/images/presence/buddy-small-on.png) !important; }
+#currentPresenceLabel.busy { background-image: url(../components/images/presence/buddy-small-dnd.png) !important; }
+#currentPresenceLabel.chat-error { background-image: url(../components/images/warning-16.png) !important; }
+#currentPresenceLabel.loading { background-image: url(../components/images/ajax_anim.gif) !important; }
+
+/* Misc presence styles */
+#unreadMessagesLabel {
+	color: #515D6B;
+}
+
+#unreadMessagesLabel.unread, #unreadMessagesLabel.unread a {
+	color: #f00;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#unreadMessagesLabel.flash {
+	color: red;	
+}
+

@@ -1,0 +1,31 @@
+Installing the SV Theme repository objects
+===========================================
+The sv_theme.acp file should be imported into Company Home/Data Dictionary:
+
+* Using the Alfresco Explorer, Browse to Company Home -> Data Dictionary
+* Once in the Data Dictionary, click More Actions and select Import
+* Browse to the sv_theme.acp file and click OK
+
+
+The structure
+-------------
+Company Home
+  -> Data Dictionary
+    -> SV Theme
+      -> Configuration
+        -> Chat Dashlet
+          -> * logo
+          -> * url_launch_chat.txt
+        -> Enhanced Security
+          -> * help.html
+        -> Header
+          -> * logo
+          -> * security_label.txt
+          -> * url_change_password.txt
+          -> * url_help.txt
+        -> Images
+          -> * favicon.ico
+        -> User Dashboard
+          -> * title.html
+      -> Pages
+        -> motd.html

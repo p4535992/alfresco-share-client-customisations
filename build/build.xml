@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+
+<!-- 
+This build file creates an Alfresco or Share AMP file
+Edit the first three properties and you're away
+
+The default target will create an amp file
+and the "cleanAndApply" target will apply
+that AMP to the target war
+-->
+
+<project name="Surevine Template AMP Build File" default="package" basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+
+	<!-- Pick up environment variables so that the resolution of directories, etc, does not need to be hardcoded. -->
+	<property environment="env" />
+
+	<!-- 
+	The name of the module you are creating.  This must match the directory the module is in 
+	under alfresco/module in the config and source/java directories
+	-->
+	<property name="module.name" value="com_surevine_alfresco_SvThemeModule" />
+
+	<!-- 
+	This should work straight from the SVN in eclipse but it depends exactly how you invoke it
+	-->
+	<property name="project.dir" value=".." />
+
+	<!--
+	Temporary build directory
+	-->
+	<property name="build.dir" value="../release" />
+
+	<property name="maven.repo.local" value="${user.home}/.m2/repository" />
+
+	<!-- Maven POM file -->
+	<property name="pom.file" value="${project.dir}/pom.xml" />
+
+	<!-- Bring in the pom which defines the dependencies -->
+	<artifact:pom file="${pom.file}" id="pom">
+		<localRepository path="${maven.repo.local}" />
+	</artifact:pom>
+
+	<!-- Now assign the dependencies to a fileset so that they can be referenced -->
+	<artifact:dependencies filesetId="pomdeps" pomRefId="pom">
+		<localRepository path="${maven.repo.local}" />
+	</artifact:dependencies>
+
+	<!-- You don't need to edit anything after this line -->
+	<property name="config.dir" value="${project.dir}/config" />
+	<property name="jar.file" value="${build.dir}/lib/${module.name}.jar" />
+	<property name="amp.file" value="${build.dir}/${module.name}.amp" />
+
+	<!-- Root SVN URL for this module -->
+	<property name="svn.url" value="https://svn.surevine.net/integration/alfresco_share_module/" />
+
+	<!-- SVN Tags URL for this module -->
+	<property name="svn.tags.url" value="${svn.url}tags/" />
+
+	<path id="class.path">
+		<dirset dir="${build.dir}" />
+		<fileset refid="pomdeps" />
+	</path>
+
+	<target name="clean-java" description="Cleans Java classes only">
+		<delete dir="${build.dir}/classes" includeEmptyDirs="true" quiet="yes" />
+		<delete file="${jar.file}" />
+	</target>
+
+	<!--
+	This doesn't need to depend on clean-java as we're going to delete the
+	whole build directory anyway
+	-->
+	<target name="clean" description="Delete and recreate the build directory">
+		<delete dir="${build.dir}" includeEmptyDirs="true" quiet="yes" />
+		<mkdir dir="${build.dir}" />
+	</target>
+
+	<target name="init" description="Creates the top-level dist and lib directories">
+		<mkdir dir="${build.dir}/dist" />
+		<mkdir dir="${build.dir}/lib" />
+	</target>
+
+	<target name="compile" description="Compile Java classes and copy in relevant message bundles">
+		<property name="myclasspath" refid="class.path" />
+		<echo message="Classpath = ${myclasspath}" />
+		<mkdir dir="${build.dir}/classes" />
+		<javac classpathref="class.path" srcdir="${project.dir}/source/java" destdir="${build.dir}/classes" />
+		<copy todir="${build.dir}/classes">
+			<fileset dir="${project.dir}/source/java" includes="**/*.properties" />
+		</copy>
+	</target>
+
+	<target name="package-jar" depends="compile" description="Jar up the Java components of this module">
+		<jar destfile="${jar.file}">
+			<fileset dir="${build.dir}/classes" includes="**/*" />
+		</jar>
+	</target>
+
+	<target name="package-amp" depends="init, package-jar, minify-js, copy-i18n-properties" description="Package the Module">
+		<zip destfile="${amp.file}">
+			<fileset dir="${build.dir}" includes="lib/*.jar" />
+			<zipfileset dir="${build.dir}" includes="classes/org/springframework/**/*" prefix="WEB-INF" />
+			<fileset dir="${project.dir}" includes="config/**/*.*" excludes="**/module.properties" />
+			<fileset dir="${project.dir}/config/alfresco/module/${module.name}" includes="module.properties,file-mapping.properties" />
+			<fileset dir="${project.dir}/source/web" />
+		</zip>
+	</target>
+
+	<target name="update-war" depends="package-amp" description="Update the WAR file.">
+		<echo>Installing into WAR</echo>
+		<java dir="." fork="true" classname="org.alfresco.repo.module.tool.ModuleManagementTool">
+			<classpath refid="class.path" />
+			<arg line="install ${amp.file} ${war.file} -force -verbose" />
+		</java>
+		<echo>Installation Finished</echo>
+	</target>
+
+	<target name="package" depends="clean, package-amp" description="Run a clean build and package as an AMP" />
+
+	<target name="install" depends="package">
+		<!-- use the maven ant tasks to install in the local repository -->
+		<artifact:install file="${jar.file}">
+			<pom refid="pom" />
+			<!-- The attach is required so that the amp can be deployed to nexus also, maven doesn't support AMPs OOTB -->
+			<attach file="${amp.file}" type="amp" />
+			<localRepository path="${maven.repo.local}" />
+		</artifact:install>
+	</target>
+
+	<target name="deploy" depends="package">
+		<!-- use the maven ant tasks to deploy to nexus -->
+		<artifact:deploy file="${jar.file}">
+			<pom refid="pom" />
+			<!-- The attach is required so that the amp can be deployed to nexus also, maven doesn't support AMPs OOTB -->
+			<attach file="${amp.file}" type="amp" />
+			<localRepository path="${maven.repo.local}" />
+		</artifact:deploy>
+	</target>
+
+	<target name="cleanAndApply" depends="clean, update-war, list-installed-modules" description="Run a clean build and update the given WAR file" />
+
+	<target name="list-installed-modules" depends="" description="List the modules installed in the WAR file to confirm succesful application">
+		<echo>Listing installed modules of ${war.file}</echo>
+		<java dir="../source" fork="true" classname="org.alfresco.repo.module.tool.ModuleManagementTool">
+			<classpath refid="class.path" />
+			<arg line="list ${war.file}" />
+		</java>
+	</target>
+
+	<target name="minify-js" description="Minify the javascript files">
+		<echo>Compressing Javascript...</echo>
+		<apply executable="java" parallel="false" dest="${project.dir}/source/web">
+			<fileset dir="${project.dir}/source/web">
+				<include name="templates/**/*.js" />
+				<include name="components/**/*.js" />
+				<include name="js/**/*.js" />
+				<include name="modules/**/*.js" />
+				<exclude name="**/*-min.js" />
+				<exclude name="**/WEB-INF/**" />
+				<exclude name="**/tiny_mce/**" />
+				<exclude name="**/yui/**" />
+				<exclude name="**/log4javascript*.js" />
+			</fileset>
+			<arg line="-jar" />
+			<arg path="lib/yuicompressor-2.4.7.jar" />
+			<arg line="-o" />
+			<targetfile />
+			<srcfile />
+			<mapper type="glob" from="*.js" to="*-min.js" />
+		</apply>
+	</target>
+
+	<target name="copy-i18n-properties" description="Copies the *.properties files into *_en.properties files">
+		<!-- clean up previously generated properties files -->
+		<delete>
+			<fileset dir="${project.dir}/config/alfresco/messages">
+				<include name="*_en.properties" />
+			</fileset>
+			<fileset dir="${project.dir}/config/alfresco/site-webscripts">
+				<include name="*_en.properties" />
+			</fileset>
+		</delete>
+
+		<copy todir="${project.dir}/config/alfresco/messages">
+			<fileset dir="${project.dir}/config/alfresco/messages" />
+			<mapper type="regexp" from="^([^_]*).properties$" to="\1_en.properties" />
+		</copy>
+		<copy todir="${project.dir}/config/alfresco/site-webscripts">
+			<fileset dir="${project.dir}/config/alfresco/site-webscripts" />
+			<mapper type="regexp" from="^([^_]*).get.properties$" to="\1.get_en.properties" />
+		</copy>
+	</target>
+
+	<target name="release">
+		<echo>Updating local pom.xml...</echo>
+		<replaceregexp file="${pom.file}" match="&lt;version&gt;.*&lt;/version&gt;" replace="&lt;version&gt;${env.VERSION_NUMBER_RELEASE}&lt;/version&gt;" />
+		<echo>Committing tag into ${svn.tags.url}${env.VERSION_NUMBER_RELEASE}</echo>
+		<exec executable="svn" failonerror="true">
+			<arg value="copy" />
+			<arg value="${project.dir}" />
+			<arg value="${svn.tags.url}${env.VERSION_NUMBER_RELEASE}" />
+			<arg value="-m" />
+			<arg value="Tagging for ${env.VERSION_NUMBER_RELEASE} release" />
+		</exec>
+		<echo>Building and publishing version ${env.VERSION_NUMBER_RELEASE}</echo>
+		<antcall target="deploy" />
+		<echo>Updating local pom.xml...</echo>
+		<replaceregexp file="${pom.file}" match="&lt;version&gt;.*&lt;/version&gt;" replace="&lt;version&gt;${env.VERSION_NUMBER_NEW}&lt;/version&gt;" />
+		<echo>Committing into trunk...</echo>
+		<exec executable="svn" failonerror="true">
+			<arg value="commit" />
+			<arg value="${project.dir}" />
+			<arg value="-m" />
+			<arg value="Updating version number to ${env.VERSION_NUMBER_NEW} following ${env.VERSION_NUMBER_RELEASE} release" />
+		</exec>
+	</target>
+</project>
