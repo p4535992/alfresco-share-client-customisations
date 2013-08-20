@@ -162,7 +162,6 @@ function com_surevine_getChildOfClass (el, className) {
           this._initMouseOverListeners();
 
           // Render any mediawiki markup
-          // TODO: look at doing this on the server
           var divs = Dom.getElementsByClassName('pageCopy', 'div');
           var div;
           for (var i=0; i < divs.length; i++)

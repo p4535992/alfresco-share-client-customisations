@@ -406,7 +406,6 @@
       setOptions: function ObjectFinder_setOptions(obj)
       {
          Alfresco.ObjectFinder.superclass.setOptions.call(this, obj);
-         // TODO: Do we need to filter this object literal before passing it on..?
          this.options.objectRenderer.setOptions(obj);
          
          return this;
@@ -495,7 +494,7 @@
             this.widgets.cancel = Alfresco.util.createYUIButton(this, "cancel", this.onCancel);
             
             // force the generated buttons to have a name of "-" so it gets ignored in
-            // JSON submit. TODO: remove this when JSON submit behaviour is configurable
+            // JSON submit. Remove this when JSON submit behaviour is configurable
             Dom.get(this.id + "-ok-button").name = "-";
             Dom.get(this.id + "-cancel-button").name = "-";
             
@@ -1551,7 +1550,7 @@
             this.widgets.searchButton.on("click", this.onSearch, this.widgets.searchButton, this);
             
             // force the generated buttons to have a name of "-" so it gets ignored in
-            // JSON submit. TODO: remove this when JSON submit behaviour is configurable
+            // JSON submit. Remove this when JSON submit behaviour is configurable
             Dom.get(this.pickerId + "-searchButton").name = "-";
             
             // register the "enter" event on the search text field
@@ -1584,7 +1583,7 @@
             });
             
             // force the generated buttons to have a name of "-" so it gets ignored in
-            // JSON submit. TODO: remove this when JSON submit behaviour is configurable
+            // JSON submit. Remove this when JSON submit behaviour is configurable
             Dom.get(this.pickerId + "-folderUp-button").name = "-";
             Dom.get(this.pickerId + "-navigator-button").name = "-";
    
@@ -2399,7 +2398,7 @@
             }
             
             /**
-             * TODO: Validation?!
+             * Validation?!
              */
             Alfresco.util.Ajax.jsonPost(
             {

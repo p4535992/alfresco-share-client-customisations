@@ -45,7 +45,6 @@
       Alfresco.module.TagLibrary.superclass.constructor.call(this, "Alfresco.module.TagLibrary", htmlId + "-tagLibrary", ["button"]);
       
       /**
-       * TODO: Remove this hack.
        * The TagLibrary was trying to register itself with the htmlId. This isn't a good idea, as there will likely
        * already be a component registered with that id.
        * Unfortunately the TagLibrary code (and therefore it's historical users) rely on this id

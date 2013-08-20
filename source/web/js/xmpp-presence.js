@@ -288,10 +288,7 @@ Alfresco.thirdparty.xmpp.resetControls = function() {
 	// Disable Chat error tooltip
 	Alfresco.thirdparty.xmpp.chatErrorTooltip.cfg.setProperty("disabled", true); 
 	// Disable Chat open tooltip
-	Alfresco.thirdparty.xmpp.chatOpenTooltip.cfg.setProperty("disabled", true); 
-	
-	// TODO need to clear the chat-open and chat-error class from the unreadMessageLabel
-	
+	Alfresco.thirdparty.xmpp.chatOpenTooltip.cfg.setProperty("disabled", true); 	
 }
 
 
@@ -581,7 +578,6 @@ Alfresco.thirdparty.xmpp.renderMessages = function(messageData, forceRender) {
 				YAHOO.util.Dom.addClass(Alfresco.thirdparty.xmpp.unreadMessagesLabel, "unread");
 				
 				// Build notifications
-				// TODO pull out into buildNotificationMarkup(messages)
 				var notificationString = "";
 				for (var i = 0; i < messageData.messages.length; i++) {
 					var contact = messageData.messages[i];
@@ -901,13 +897,11 @@ function initXMPPPresence() {
 	// Render last known presence / messages, if set
 	var lastKnownPresenceString = Alfresco.thirdparty.xmpp.getCookie("lastKnownPresence");
 	if(lastKnownPresenceString!=undefined && lastKnownPresenceString!=null) {
-		// TODO store as last known?
 		var lastKnownPresence = YAHOO.lang.JSON.parse(lastKnownPresenceString);
 		Alfresco.thirdparty.xmpp.renderPresence(lastKnownPresence, true);
 	}
 	var lastKnownMessagesString = Alfresco.thirdparty.xmpp.getCookie("lastKnownMessages");
 	if(lastKnownMessagesString!=undefined && lastKnownMessagesString!=null) {
-		// TODO store as last known?
 		var lastKnownMessages = YAHOO.lang.JSON.parse(lastKnownMessagesString);
 		Alfresco.thirdparty.xmpp.renderMessages(lastKnownMessages, true);
 	}

@@ -1182,7 +1182,7 @@ div.dashboard #bd {
 	background-image: none !important;
 	padding-bottom: 10px;
 	position: absolute;
-	top: 115px;	/* TODO: Position this in a better way */
+	top: 115px;	
 	left: 11px;
 	margin: 0;
 	border: none;

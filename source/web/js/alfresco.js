@@ -3939,7 +3939,6 @@ Alfresco.util.Anim = function()
          attributes = YAHOO.lang.merge(this.fadeAttributes, attributes ? attributes : {});
          var adjustDisplay = attributes.adjustDisplay;
 
-         // todo test against functionality instead of browser
          var supportsOpacity = YAHOO.env.ua.ie === 0;
 
          // Prepare el before fade
@@ -6148,7 +6147,6 @@ Alfresco.util.RENDERLOOPSIZE = 25;
                // Set default values for pagination since they weren't provided in the url
                me.currentSkipCount = me.currentSkipCount || me.config.paginator.config.recordOffset;
                me.currentMaxItems = me.currentMaxItems || me.config.paginator.config.rowsPerPage;
-               // todo set sorting default attributes if not present
             }
             if (me.currentFilter.filterId)
             {
@@ -6221,7 +6219,6 @@ Alfresco.util.RENDERLOOPSIZE = 25;
        */
       getPagingState: function DT_getPagingState(skipCount, maxItems)
       {
-         // TODO for sorting: + "|" + this.currentSortKey + "|" + this.currentDir;
          return YAHOO.lang.isNumber(skipCount) ? (skipCount + (YAHOO.lang.isNumber(maxItems) ? "|" + maxItems : "")) : "";
       },
 
@@ -6237,7 +6234,6 @@ Alfresco.util.RENDERLOOPSIZE = 25;
          var paging = (pagingState && pagingState.indexOf("|") > 0) ? pagingState.split("|") : [];
          this.currentSkipCount = paging.length > 0 ? parseInt(paging[0]) : this.config.paginator.config.recordOffset;
          this.currentMaxItems = paging.length > 1 ? parseInt(paging[1]) : this.config.paginator.config.rowsPerPage;
-         // todo for sorting variables
       },
 
       /**
