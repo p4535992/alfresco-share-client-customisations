@@ -27,11 +27,11 @@ Alfresco.thirdparty.xmpp.pollSlowIntervalMillis = 45000; // 45 seconds
 
 // Current polling frequency for presence & message notifications (variable)
 Alfresco.thirdparty.xmpp.pollInterval = 5000; // Initially set to 5 seconds (fast interval)
-Alfresco.thirdparty.xmpp.otherUserPollInterval = 20000; // Poll for other users' presence every 30 seconds
-Alfresco.thirdparty.xmpp.otherUserPollOnlineBias=4; // Poll just for online users 4 times as much as for offline users. 
-													// So, if otherUserPollInterval = 20 seconds and this = 4, then the
+Alfresco.thirdparty.xmpp.otherUserPollInterval = 20000; // Poll for other users' presence every 20 seconds
+Alfresco.thirdparty.xmpp.otherUserPollOnlineBias=3; // Poll just for online users 3 times as much as for offline users. 
+													// So, if otherUserPollInterval = 20 seconds and this = 3, then the
 													// system will refresh the presence of online/busy users every 20 seconds
-													// and of offline users every 80 seconds
+													// and of offline users every 60 seconds
 Alfresco.thirdparty.xmpp.otherUserPollOnlineBiasCount=0;
 Alfresco.thirdparty.xmpp.userQueryLimit=75;
 
