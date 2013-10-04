@@ -1,3 +1,7 @@
+<import resource="classpath:alfresco/site-webscripts/org/alfresco/components/enhanced-security/enhanced-security.get.js">
+<import resource="classpath:alfresco/site-webscripts/org/alfresco/components/perishability/perishable-reasons.lib.js">
+
+
 /*
  * Copyright (C) 2008-2010 Surevine Limited.
  *   
@@ -19,8 +23,6 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
-<import resource="classpath:alfresco/site-webscripts/org/alfresco/components/enhanced-security/enhanced-security.get.js">
-<import resource="classpath:alfresco/site-webscripts/org/alfresco/components/perishability/perishable-reasons.lib.js">
 
 /**
  * Custom content types
