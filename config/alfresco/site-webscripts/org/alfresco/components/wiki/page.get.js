@@ -1,6 +1,9 @@
 <import resource="classpath:alfresco/site-webscripts/org/alfresco/callutils.js">
 <import resource="classpath:alfresco/site-webscripts/org/alfresco/components/enhanced-security/enhanced-security.get.js">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4f9d4ffd5a7e9a2517eb2b4406908b81e6ee8715
 /*
  * Copyright (C) 2008-2010 Surevine Limited.
  *   
