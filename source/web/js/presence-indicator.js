@@ -104,7 +104,7 @@ Alfresco.thirdparty.presence.launchChat = function(userName,openFireIpAddress) {
             
             if (!chatLoaded) {
                 
-            	chatWindow = window.open(pageToLoad, "chatWindow_"+userName);
+            	chatWindow = window.open(pageToLoad, "chatWindow_"+userName.replace('-', 'dash'));
                 
                 // Force Firefox tab / window switch
                 if(navigator.userAgent.indexOf("Firefox") != -1) {
