@@ -19,6 +19,110 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
+
+Alfresco.gutter = function(myEditor)
+{
+   var Dom = YAHOO.util.Dom,
+      Anim = YAHOO.util.Anim;
+   
+   return (
+   {
+      status: false,
+      gutter: null,
+         
+      createGutter: function()
+      {
+         this.gutter = new YAHOO.widget.Overlay('gutter1',
+         {
+            height: '384px',
+            width: '300px',
+            context: [Dom.get(myEditor.getContainer()), 'tl', 'tr'],
+            position: 'absolute',
+            visible: false
+         });
+         
+         this.gutter.hideEvent.subscribe(function()
+         {
+            myEditor.deactivateButton('alfresco-imagelibrary');
+            Dom.setStyle("image_results", "overflow", "hidden");
+            Dom.setStyle("gutter1", "visibility", "visible");
+            var anim = new Anim('gutter1',
+            {
+               width:
+               {
+                  from: 300,
+                  to: 0
+               },
+               opacity:
+               {
+                  from: 1,
+                  to: 0
+               }
+            }, 1);
+            anim.onComplete.subscribe(function()
+            {
+               Dom.setStyle("gutter1", "visibility", "hidden");
+            });
+            anim.animate();
+         }, this, true);
+
+         this.gutter.showEvent.subscribe(function()
+         {
+            myEditor.activateButton('alfresco-imagelibrary');
+            this.gutter.cfg.setProperty('context', [Dom.get(myEditor.getContainer()), 'tl', 'tr']);
+            Dom.setStyle("gutter1", "visibility", "visible");
+            var anim = new Anim('gutter1',
+            {
+               width:
+               {
+                  from: 0,
+                  to: 300
+               },
+               opacity:
+               {
+                  from: 0,
+                  to: 1
+               }
+            }, 1);
+            anim.onComplete.subscribe(function()
+            {
+               Dom.setStyle("image_results", "overflow", "auto");
+            });
+            anim.animate();
+         }, this, true);
+         
+         var libraryTitle = Alfresco.util.message("imagelib.title");
+         this.gutter.setBody('<div class="yui-toolbar-container"><div class="yui-toolbar-titlebar"><h2>' + libraryTitle + '</h2></div></div><div id="image_results"></div>');
+         this.gutter.render(document.body);
+         Dom.setStyle(this.gutter.element, 'width', '0px');
+      },
+         
+      open: function()
+      {
+         this.gutter.show();
+         this.status = true;
+      },
+         
+      close: function()
+      {
+         this.gutter.hide();
+         this.status = false;
+      },
+         
+      toggle: function()
+      {
+         if (this.status)
+         {
+            this.close();
+         }
+         else
+         {
+            this.open();
+         }
+      }
+   });
+};
+
 Alfresco.util = Alfresco.util || {};
 
 Alfresco.util.createImageEditor = function(id, options)
