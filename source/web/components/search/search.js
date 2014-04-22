@@ -674,7 +674,7 @@
       {
          var url = null;
          
-         var name = record.getData("name"),
+         var name = encodeURIComponent(record.getData("name")),
              type = record.getData("type"),
              site = record.getData("site"),
              path = record.getData("path");
