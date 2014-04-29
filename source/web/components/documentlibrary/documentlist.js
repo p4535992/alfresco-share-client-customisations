@@ -1099,7 +1099,7 @@
                       */
                      desc += '<div class="detail">';
                      desc += '<span class="item"><em>' + scope.msg("details.editing-started.on") + '</em> ' + $date(record.modifiedOn) + '</span>';
-                     desc += '<span class="item"><em>' + scope.msg("details.editing-started.by") + '</em> ' + (record.modifiedByUser, record.modifiedBy, record.modifiedByUserPresence) + '</span>';
+                     desc += '<span class="item"><em>' + scope.msg("details.editing-started.by") + '</em> ' + $userProfileWithPresence(record.modifiedByUser, record.modifiedBy, record.modifiedByUserPresence) + '</span>';
                      desc += '<span class="item"><em>' + scope.msg("details.size") + '</em> ' + Alfresco.util.formatFileSize(record.size) + '</span>';
                      desc += '</div><div class="detail">';
                      desc += '<span class="item"><em>' + scope.msg("details.description") + '</em> ' + $links($html(description)) + '</span>';
